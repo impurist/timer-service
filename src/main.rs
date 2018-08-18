@@ -31,7 +31,7 @@ impl AfterMiddleware for ResponseTime {
 
 fn hello_json_world(_: &mut Request) -> IronResult<Response> {
     let content_type = "application/json".parse::<Mime>().unwrap();
-    Ok(Response::with((content_type, status::Ok, "{ response: \"Hello world!\" }")))
+    Ok(Response::with((content_type, status::Ok, "{ \"response\": \"Hello world!\" }")))
 }
 
 fn main() {
